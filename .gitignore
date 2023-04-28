@@ -1,0 +1,5 @@
+.vscode
+.dart_tool
+.fvm/flutter_sdk
+.flutter-plugins
+.flutter-plugins-dependencies

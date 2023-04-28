@@ -1,0 +1,2 @@
+analyze:
+	fvm flutter analyze;
