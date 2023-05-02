@@ -1,4 +1,4 @@
-import 'package:fgs_utils_v1/src/analytics/fgs_utils__analytics_service_cases.dart';
+import 'package:fgs_utils/src/analytics/fgs_utils__analytics_service_cases.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 
 /// Firebase analytics service.

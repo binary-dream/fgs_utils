@@ -1,5 +1,5 @@
 
-import 'package:fgs_utils_v1/src/log/fgs_utils__log_service_cases.dart';
+import 'package:fgs_utils/src/log/fgs_utils__log_service_cases.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 
 /// Firebase crashlytics service.

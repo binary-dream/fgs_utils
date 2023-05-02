@@ -1,6 +1,6 @@
-name: fgs_utils_v1
+name: fgs_utils
 description: A Very Good Project created by Very Good CLI.
-version: 0.1.0+1
+version: 1.0.0+1
 publish_to: none
 
 environment:

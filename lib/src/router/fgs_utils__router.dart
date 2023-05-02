@@ -1,4 +1,4 @@
-import 'package:fgs_utils_v1/src/router/fgs_utils__route.dart';
+import 'package:fgs_utils/src/router/fgs_utils__route.dart';
 import 'package:go_router/go_router.dart';
 
 /// Router.

@@ -19,7 +19,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'binary-dream', // Usually your GitHub org/user name.
-  projectName: 'fgs_utils_v1', // Usually your repo name.
+  projectName: 'fgs_utils', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -78,7 +78,7 @@ const config = {
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/binary-dream/fgs_utils_v1',
+            href: 'https://github.com/binary-dream/fgs_utils',
             label: 'GitHub',
             position: 'right',
           },

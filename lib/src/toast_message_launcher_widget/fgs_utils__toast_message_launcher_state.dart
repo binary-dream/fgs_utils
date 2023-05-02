@@ -1,4 +1,4 @@
-import 'package:fgs_utils_v1/src/toast_message_launcher_widget/fgs_utils__toast_message_state.dart';
+import 'package:fgs_utils/src/toast_message_launcher_widget/fgs_utils__toast_message_state.dart';
 
 /// Toast message launcher state. 
 /// ignore: one_member_abstracts

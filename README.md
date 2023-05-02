@@ -10,11 +10,11 @@ A Very Good Project created by Very Good CLI.
 
 **❗ In order to start using Fgs Utils V1 you must have the [Flutter SDK][flutter_install_link] installed on your machine.**
 
-Add `fgs_utils_v1` to your `pubspec.yaml`:
+Add `fgs_utils` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  fgs_utils_v1:
+  fgs_utils:
 ```
 
 Install it:

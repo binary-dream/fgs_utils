@@ -1,4 +1,4 @@
-import 'package:fgs_utils_v1/src/toast_message_launcher_widget/fgs_utils__toast_message_launcher_state.dart';
+import 'package:fgs_utils/src/toast_message_launcher_widget/fgs_utils__toast_message_launcher_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

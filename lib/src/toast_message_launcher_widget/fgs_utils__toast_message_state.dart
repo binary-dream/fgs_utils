@@ -1,4 +1,4 @@
-import 'package:fgs_utils_v1/src/translatable_message/fgs_utils__translateable_message_state.dart';
+import 'package:fgs_utils/src/translatable_message/fgs_utils__translateable_message_state.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'fgs_utils__toast_message_state.freezed.dart';

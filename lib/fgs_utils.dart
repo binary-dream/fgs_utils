@@ -1,5 +1,5 @@
 /// A Very Good Project created by Very Good CLI.
-library fgs_utils_v1;
+library fgs_utils;
 
 export 'src/analytics/fgs_utils__analytics_service_cases.dart';
 export 'src/analytics/fgs_utils__firebase_analytics_service.dart';

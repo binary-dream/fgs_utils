@@ -1,5 +1,5 @@
 
-import 'package:fgs_utils_v1/src/uuid/fgs_utils__uuid_service_cases.dart';
+import 'package:fgs_utils/src/uuid/fgs_utils__uuid_service_cases.dart';
 import 'package:uuid/uuid.dart';
 
 /// Uuid service.

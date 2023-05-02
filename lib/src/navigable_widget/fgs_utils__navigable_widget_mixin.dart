@@ -1,4 +1,4 @@
-import 'package:fgs_utils_v1/src/navigable_widget/fgs_utils__navigable_state.dart';
+import 'package:fgs_utils/src/navigable_widget/fgs_utils__navigable_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
