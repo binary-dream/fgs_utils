@@ -28,19 +28,26 @@ mixin FGS_UTILS__NavigableWidgetMixin
         }
       },
       listener: (context, state) {
-        if(state.getNavigateToState()!.push) {
-          context.pushNamed(
-            state.getNavigateToState()!.routeName,
-            params: state.getNavigateToState()!.pathParams ?? {},
-            queryParams: state.getNavigateToState()!.queryParams ?? {},
-          );
-        } else {
-          context.goNamed(
-            state.getNavigateToState()!.routeName,
-            params: state.getNavigateToState()!.pathParams ?? {},
-            queryParams: state.getNavigateToState()!.queryParams ?? {},
-          );
-       }
+        state.getNavigateToState()!.map(
+          go: (go) {
+            if(go.push) {
+              context.pushNamed(
+                go.routeName,
+                params: go.pathParams ?? {},
+                queryParams: go.queryParams ?? {},
+              );
+            } else {
+              context.goNamed(
+                go.routeName,
+                params: go.pathParams ?? {},
+                queryParams: go.queryParams ?? {},
+              );
+            }
+          }, 
+          pop: (pop) {
+            context.pop();
+          },
+        );
       },
     );
   }

@@ -17,45 +17,47 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$FGS_UTILS__NavigateToState {
   String get uuid => throw _privateConstructorUsedError;
-  String get routeName => throw _privateConstructorUsedError;
-  bool get push => throw _privateConstructorUsedError;
-  Map<String, String>? get pathParams => throw _privateConstructorUsedError;
-  Map<String, String>? get queryParams => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String uuid, String routeName, bool push,
             Map<String, String>? pathParams, Map<String, String>? queryParams)
-        main,
+        go,
+    required TResult Function(String uuid) pop,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String uuid, String routeName, bool push,
             Map<String, String>? pathParams, Map<String, String>? queryParams)?
-        main,
+        go,
+    TResult? Function(String uuid)? pop,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String uuid, String routeName, bool push,
             Map<String, String>? pathParams, Map<String, String>? queryParams)?
-        main,
+        go,
+    TResult Function(String uuid)? pop,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(FGS_UTILS__NavigateToState__Main value) main,
+    required TResult Function(FGS_UTILS__NavigateToState__Go value) go,
+    required TResult Function(FGS_UTILS__NavigateToState__Pop value) pop,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(FGS_UTILS__NavigateToState__Main value)? main,
+    TResult? Function(FGS_UTILS__NavigateToState__Go value)? go,
+    TResult? Function(FGS_UTILS__NavigateToState__Pop value)? pop,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(FGS_UTILS__NavigateToState__Main value)? main,
+    TResult Function(FGS_UTILS__NavigateToState__Go value)? go,
+    TResult Function(FGS_UTILS__NavigateToState__Pop value)? pop,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -72,12 +74,7 @@ abstract class $FGS_UTILS__NavigateToStateCopyWith<$Res> {
       _$FGS_UTILS__NavigateToStateCopyWithImpl<$Res,
           FGS_UTILS__NavigateToState>;
   @useResult
-  $Res call(
-      {String uuid,
-      String routeName,
-      bool push,
-      Map<String, String>? pathParams,
-      Map<String, String>? queryParams});
+  $Res call({String uuid});
 }
 
 /// @nodoc
@@ -95,43 +92,23 @@ class _$FGS_UTILS__NavigateToStateCopyWithImpl<$Res,
   @override
   $Res call({
     Object? uuid = null,
-    Object? routeName = null,
-    Object? push = null,
-    Object? pathParams = freezed,
-    Object? queryParams = freezed,
   }) {
     return _then(_value.copyWith(
       uuid: null == uuid
           ? _value.uuid
           : uuid // ignore: cast_nullable_to_non_nullable
               as String,
-      routeName: null == routeName
-          ? _value.routeName
-          : routeName // ignore: cast_nullable_to_non_nullable
-              as String,
-      push: null == push
-          ? _value.push
-          : push // ignore: cast_nullable_to_non_nullable
-              as bool,
-      pathParams: freezed == pathParams
-          ? _value.pathParams
-          : pathParams // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>?,
-      queryParams: freezed == queryParams
-          ? _value.queryParams
-          : queryParams // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$FGS_UTILS__NavigateToState__MainCopyWith<$Res>
+abstract class _$$FGS_UTILS__NavigateToState__GoCopyWith<$Res>
     implements $FGS_UTILS__NavigateToStateCopyWith<$Res> {
-  factory _$$FGS_UTILS__NavigateToState__MainCopyWith(
-          _$FGS_UTILS__NavigateToState__Main value,
-          $Res Function(_$FGS_UTILS__NavigateToState__Main) then) =
-      __$$FGS_UTILS__NavigateToState__MainCopyWithImpl<$Res>;
+  factory _$$FGS_UTILS__NavigateToState__GoCopyWith(
+          _$FGS_UTILS__NavigateToState__Go value,
+          $Res Function(_$FGS_UTILS__NavigateToState__Go) then) =
+      __$$FGS_UTILS__NavigateToState__GoCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -143,13 +120,13 @@ abstract class _$$FGS_UTILS__NavigateToState__MainCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$FGS_UTILS__NavigateToState__MainCopyWithImpl<$Res>
+class __$$FGS_UTILS__NavigateToState__GoCopyWithImpl<$Res>
     extends _$FGS_UTILS__NavigateToStateCopyWithImpl<$Res,
-        _$FGS_UTILS__NavigateToState__Main>
-    implements _$$FGS_UTILS__NavigateToState__MainCopyWith<$Res> {
-  __$$FGS_UTILS__NavigateToState__MainCopyWithImpl(
-      _$FGS_UTILS__NavigateToState__Main _value,
-      $Res Function(_$FGS_UTILS__NavigateToState__Main) _then)
+        _$FGS_UTILS__NavigateToState__Go>
+    implements _$$FGS_UTILS__NavigateToState__GoCopyWith<$Res> {
+  __$$FGS_UTILS__NavigateToState__GoCopyWithImpl(
+      _$FGS_UTILS__NavigateToState__Go _value,
+      $Res Function(_$FGS_UTILS__NavigateToState__Go) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -161,7 +138,7 @@ class __$$FGS_UTILS__NavigateToState__MainCopyWithImpl<$Res>
     Object? pathParams = freezed,
     Object? queryParams = freezed,
   }) {
-    return _then(_$FGS_UTILS__NavigateToState__Main(
+    return _then(_$FGS_UTILS__NavigateToState__Go(
       uuid: null == uuid
           ? _value.uuid
           : uuid // ignore: cast_nullable_to_non_nullable
@@ -188,9 +165,8 @@ class __$$FGS_UTILS__NavigateToState__MainCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FGS_UTILS__NavigateToState__Main
-    extends FGS_UTILS__NavigateToState__Main {
-  const _$FGS_UTILS__NavigateToState__Main(
+class _$FGS_UTILS__NavigateToState__Go extends FGS_UTILS__NavigateToState__Go {
+  const _$FGS_UTILS__NavigateToState__Go(
       {required this.uuid,
       required this.routeName,
       required this.push,
@@ -228,14 +204,14 @@ class _$FGS_UTILS__NavigateToState__Main
 
   @override
   String toString() {
-    return 'FGS_UTILS__NavigateToState.main(uuid: $uuid, routeName: $routeName, push: $push, pathParams: $pathParams, queryParams: $queryParams)';
+    return 'FGS_UTILS__NavigateToState.go(uuid: $uuid, routeName: $routeName, push: $push, pathParams: $pathParams, queryParams: $queryParams)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FGS_UTILS__NavigateToState__Main &&
+            other is _$FGS_UTILS__NavigateToState__Go &&
             (identical(other.uuid, uuid) || other.uuid == uuid) &&
             (identical(other.routeName, routeName) ||
                 other.routeName == routeName) &&
@@ -258,19 +234,19 @@ class _$FGS_UTILS__NavigateToState__Main
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FGS_UTILS__NavigateToState__MainCopyWith<
-          _$FGS_UTILS__NavigateToState__Main>
-      get copyWith => __$$FGS_UTILS__NavigateToState__MainCopyWithImpl<
-          _$FGS_UTILS__NavigateToState__Main>(this, _$identity);
+  _$$FGS_UTILS__NavigateToState__GoCopyWith<_$FGS_UTILS__NavigateToState__Go>
+      get copyWith => __$$FGS_UTILS__NavigateToState__GoCopyWithImpl<
+          _$FGS_UTILS__NavigateToState__Go>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String uuid, String routeName, bool push,
             Map<String, String>? pathParams, Map<String, String>? queryParams)
-        main,
+        go,
+    required TResult Function(String uuid) pop,
   }) {
-    return main(uuid, routeName, push, pathParams, queryParams);
+    return go(uuid, routeName, push, pathParams, queryParams);
   }
 
   @override
@@ -278,9 +254,10 @@ class _$FGS_UTILS__NavigateToState__Main
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String uuid, String routeName, bool push,
             Map<String, String>? pathParams, Map<String, String>? queryParams)?
-        main,
+        go,
+    TResult? Function(String uuid)? pop,
   }) {
-    return main?.call(uuid, routeName, push, pathParams, queryParams);
+    return go?.call(uuid, routeName, push, pathParams, queryParams);
   }
 
   @override
@@ -288,11 +265,12 @@ class _$FGS_UTILS__NavigateToState__Main
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String uuid, String routeName, bool push,
             Map<String, String>? pathParams, Map<String, String>? queryParams)?
-        main,
+        go,
+    TResult Function(String uuid)? pop,
     required TResult orElse(),
   }) {
-    if (main != null) {
-      return main(uuid, routeName, push, pathParams, queryParams);
+    if (go != null) {
+      return go(uuid, routeName, push, pathParams, queryParams);
     }
     return orElse();
   }
@@ -300,56 +278,205 @@ class _$FGS_UTILS__NavigateToState__Main
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(FGS_UTILS__NavigateToState__Main value) main,
+    required TResult Function(FGS_UTILS__NavigateToState__Go value) go,
+    required TResult Function(FGS_UTILS__NavigateToState__Pop value) pop,
   }) {
-    return main(this);
+    return go(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(FGS_UTILS__NavigateToState__Main value)? main,
+    TResult? Function(FGS_UTILS__NavigateToState__Go value)? go,
+    TResult? Function(FGS_UTILS__NavigateToState__Pop value)? pop,
   }) {
-    return main?.call(this);
+    return go?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(FGS_UTILS__NavigateToState__Main value)? main,
+    TResult Function(FGS_UTILS__NavigateToState__Go value)? go,
+    TResult Function(FGS_UTILS__NavigateToState__Pop value)? pop,
     required TResult orElse(),
   }) {
-    if (main != null) {
-      return main(this);
+    if (go != null) {
+      return go(this);
     }
     return orElse();
   }
 }
 
-abstract class FGS_UTILS__NavigateToState__Main
+abstract class FGS_UTILS__NavigateToState__Go
     extends FGS_UTILS__NavigateToState {
-  const factory FGS_UTILS__NavigateToState__Main(
+  const factory FGS_UTILS__NavigateToState__Go(
           {required final String uuid,
           required final String routeName,
           required final bool push,
           final Map<String, String>? pathParams,
           final Map<String, String>? queryParams}) =
-      _$FGS_UTILS__NavigateToState__Main;
-  const FGS_UTILS__NavigateToState__Main._() : super._();
+      _$FGS_UTILS__NavigateToState__Go;
+  const FGS_UTILS__NavigateToState__Go._() : super._();
+
+  @override
+  String get uuid;
+  String get routeName;
+  bool get push;
+  Map<String, String>? get pathParams;
+  Map<String, String>? get queryParams;
+  @override
+  @JsonKey(ignore: true)
+  _$$FGS_UTILS__NavigateToState__GoCopyWith<_$FGS_UTILS__NavigateToState__Go>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FGS_UTILS__NavigateToState__PopCopyWith<$Res>
+    implements $FGS_UTILS__NavigateToStateCopyWith<$Res> {
+  factory _$$FGS_UTILS__NavigateToState__PopCopyWith(
+          _$FGS_UTILS__NavigateToState__Pop value,
+          $Res Function(_$FGS_UTILS__NavigateToState__Pop) then) =
+      __$$FGS_UTILS__NavigateToState__PopCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String uuid});
+}
+
+/// @nodoc
+class __$$FGS_UTILS__NavigateToState__PopCopyWithImpl<$Res>
+    extends _$FGS_UTILS__NavigateToStateCopyWithImpl<$Res,
+        _$FGS_UTILS__NavigateToState__Pop>
+    implements _$$FGS_UTILS__NavigateToState__PopCopyWith<$Res> {
+  __$$FGS_UTILS__NavigateToState__PopCopyWithImpl(
+      _$FGS_UTILS__NavigateToState__Pop _value,
+      $Res Function(_$FGS_UTILS__NavigateToState__Pop) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? uuid = null,
+  }) {
+    return _then(_$FGS_UTILS__NavigateToState__Pop(
+      uuid: null == uuid
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FGS_UTILS__NavigateToState__Pop
+    extends FGS_UTILS__NavigateToState__Pop {
+  const _$FGS_UTILS__NavigateToState__Pop({required this.uuid}) : super._();
+
+  @override
+  final String uuid;
+
+  @override
+  String toString() {
+    return 'FGS_UTILS__NavigateToState.pop(uuid: $uuid)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FGS_UTILS__NavigateToState__Pop &&
+            (identical(other.uuid, uuid) || other.uuid == uuid));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, uuid);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FGS_UTILS__NavigateToState__PopCopyWith<_$FGS_UTILS__NavigateToState__Pop>
+      get copyWith => __$$FGS_UTILS__NavigateToState__PopCopyWithImpl<
+          _$FGS_UTILS__NavigateToState__Pop>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String uuid, String routeName, bool push,
+            Map<String, String>? pathParams, Map<String, String>? queryParams)
+        go,
+    required TResult Function(String uuid) pop,
+  }) {
+    return pop(uuid);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String uuid, String routeName, bool push,
+            Map<String, String>? pathParams, Map<String, String>? queryParams)?
+        go,
+    TResult? Function(String uuid)? pop,
+  }) {
+    return pop?.call(uuid);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String uuid, String routeName, bool push,
+            Map<String, String>? pathParams, Map<String, String>? queryParams)?
+        go,
+    TResult Function(String uuid)? pop,
+    required TResult orElse(),
+  }) {
+    if (pop != null) {
+      return pop(uuid);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FGS_UTILS__NavigateToState__Go value) go,
+    required TResult Function(FGS_UTILS__NavigateToState__Pop value) pop,
+  }) {
+    return pop(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(FGS_UTILS__NavigateToState__Go value)? go,
+    TResult? Function(FGS_UTILS__NavigateToState__Pop value)? pop,
+  }) {
+    return pop?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FGS_UTILS__NavigateToState__Go value)? go,
+    TResult Function(FGS_UTILS__NavigateToState__Pop value)? pop,
+    required TResult orElse(),
+  }) {
+    if (pop != null) {
+      return pop(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FGS_UTILS__NavigateToState__Pop
+    extends FGS_UTILS__NavigateToState {
+  const factory FGS_UTILS__NavigateToState__Pop({required final String uuid}) =
+      _$FGS_UTILS__NavigateToState__Pop;
+  const FGS_UTILS__NavigateToState__Pop._() : super._();
 
   @override
   String get uuid;
   @override
-  String get routeName;
-  @override
-  bool get push;
-  @override
-  Map<String, String>? get pathParams;
-  @override
-  Map<String, String>? get queryParams;
-  @override
   @JsonKey(ignore: true)
-  _$$FGS_UTILS__NavigateToState__MainCopyWith<
-          _$FGS_UTILS__NavigateToState__Main>
+  _$$FGS_UTILS__NavigateToState__PopCopyWith<_$FGS_UTILS__NavigateToState__Pop>
       get copyWith => throw _privateConstructorUsedError;
 }
