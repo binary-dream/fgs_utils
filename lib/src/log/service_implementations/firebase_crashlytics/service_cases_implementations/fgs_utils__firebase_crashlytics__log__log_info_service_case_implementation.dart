@@ -2,7 +2,7 @@ import 'package:fgs_utils/src/log/service_implementations/firebase_crashlytics/f
 
 /// Log info service case.
 // ignore: lines_longer_than_80_chars
-abstract class FGS_UTILS__FIREBASE_CRASHLYTICS__LOG__LogInfoServiceCaseImplementation {
+class FGS_UTILS__FIREBASE_CRASHLYTICS__LOG__LogInfoServiceCaseImplementation {
   /// Log info.
   Future<void> execute({
     required FGS_UTILS__FIREBASE_CRASHLYTICS__LogServiceImplementation service,
