@@ -15,4 +15,4 @@ export 'src/toast_message_launcher_widget/fgs_utils__toast_message_launcher_widg
 export 'src/toast_message_launcher_widget/fgs_utils__toast_message_state.dart';
 export 'src/translatable_message/fgs_utils__translateable_message_state.dart';
 export 'src/uuid/fgs_utils__uuid_service.dart';
-export 'src/uuid/fgs_utils__uuid_service_cases.dart';
+export 'src/uuid/fgs_utils__uuid_service_implementation.dart';
