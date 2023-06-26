@@ -35,6 +35,7 @@ mixin FGS_UTILS__ToastMessageLauncherWidgetMixin
             .of(context)
             .showSnackBar(
               SnackBar(
+                showCloseIcon: true,
                 behavior: SnackBarBehavior.floating,
                 content: Text(
                   state.getToastMessageState()!
@@ -48,6 +49,7 @@ mixin FGS_UTILS__ToastMessageLauncherWidgetMixin
             .of(context)
             .showSnackBar(
               SnackBar(
+                showCloseIcon: true,
                 behavior: SnackBarBehavior.floating,
                 content: Text(
                   state.getToastMessageState()!.message!,
