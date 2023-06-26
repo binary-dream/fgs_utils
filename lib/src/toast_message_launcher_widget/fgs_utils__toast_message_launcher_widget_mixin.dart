@@ -35,6 +35,7 @@ mixin FGS_UTILS__ToastMessageLauncherWidgetMixin
             .of(context)
             .showSnackBar(
               SnackBar(
+                behavior: SnackBarBehavior.floating,
                 content: Text(
                   state.getToastMessageState()!
                     .localizedMessage!
@@ -47,6 +48,7 @@ mixin FGS_UTILS__ToastMessageLauncherWidgetMixin
             .of(context)
             .showSnackBar(
               SnackBar(
+                behavior: SnackBarBehavior.floating,
                 content: Text(
                   state.getToastMessageState()!.message!,
                 ),

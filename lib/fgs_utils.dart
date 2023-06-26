@@ -25,3 +25,4 @@ export 'src/uuid/fgs_utils__uuid_service.dart';
 export 'src/uuid/service_implementations/default/fgs_utils__default__uuid_service_implementation.dart';
 export 'src/uuid/service_implementations/default/service_cases_implementations/fgs_utils__default__uuid__generate_v1_uuid_service_case_implementation.dart';
 export 'src/uuid/service_implementations/default/service_cases_implementations/fgs_utils__default__uuid__generate_v4_uuid_service_case_implementation.dart';
+export 'src/widgets/fgs_utils__base_widget.dart';
