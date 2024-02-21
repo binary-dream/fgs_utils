@@ -33,14 +33,14 @@ mixin FGS_UTILS__NavigableWidgetMixin
             if(go.push) {
               context.pushNamed(
                 go.routeName,
-                params: go.pathParams ?? {},
-                queryParams: go.queryParams ?? {},
+                pathParameters: go.pathParams ?? {},
+                queryParameters: go.queryParams ?? {},
               );
             } else {
               context.goNamed(
                 go.routeName,
-                params: go.pathParams ?? {},
-                queryParams: go.queryParams ?? {},
+                pathParameters: go.pathParams ?? {},
+                queryParameters: go.queryParams ?? {},
               );
             }
           }, 
