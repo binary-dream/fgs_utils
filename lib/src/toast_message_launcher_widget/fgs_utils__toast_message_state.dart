@@ -14,4 +14,11 @@ class FGS_UTILS__ToastMessageState with _$FGS_UTILS__ToastMessageState {
     FGS_UTILS__TranslateableMessageState? localizedMessage,
     String? message,
   }) = FGS_UTILS__ToastMessageState__Main;
+
+  /// Error toast message state.
+  const factory FGS_UTILS__ToastMessageState.error({
+    required String uuid,
+    FGS_UTILS__TranslateableMessageState? localizedMessage,
+    String? message,
+  }) = FGS_UTILS__ToastMessageState__Error;
 }

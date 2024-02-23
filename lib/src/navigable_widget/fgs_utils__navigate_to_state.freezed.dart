@@ -12,7 +12,7 @@ part of 'fgs_utils__navigate_to_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$FGS_UTILS__NavigateToState {
@@ -103,12 +103,12 @@ class _$FGS_UTILS__NavigateToStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$FGS_UTILS__NavigateToState__GoCopyWith<$Res>
+abstract class _$$FGS_UTILS__NavigateToState__GoImplCopyWith<$Res>
     implements $FGS_UTILS__NavigateToStateCopyWith<$Res> {
-  factory _$$FGS_UTILS__NavigateToState__GoCopyWith(
-          _$FGS_UTILS__NavigateToState__Go value,
-          $Res Function(_$FGS_UTILS__NavigateToState__Go) then) =
-      __$$FGS_UTILS__NavigateToState__GoCopyWithImpl<$Res>;
+  factory _$$FGS_UTILS__NavigateToState__GoImplCopyWith(
+          _$FGS_UTILS__NavigateToState__GoImpl value,
+          $Res Function(_$FGS_UTILS__NavigateToState__GoImpl) then) =
+      __$$FGS_UTILS__NavigateToState__GoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -120,13 +120,13 @@ abstract class _$$FGS_UTILS__NavigateToState__GoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$FGS_UTILS__NavigateToState__GoCopyWithImpl<$Res>
+class __$$FGS_UTILS__NavigateToState__GoImplCopyWithImpl<$Res>
     extends _$FGS_UTILS__NavigateToStateCopyWithImpl<$Res,
-        _$FGS_UTILS__NavigateToState__Go>
-    implements _$$FGS_UTILS__NavigateToState__GoCopyWith<$Res> {
-  __$$FGS_UTILS__NavigateToState__GoCopyWithImpl(
-      _$FGS_UTILS__NavigateToState__Go _value,
-      $Res Function(_$FGS_UTILS__NavigateToState__Go) _then)
+        _$FGS_UTILS__NavigateToState__GoImpl>
+    implements _$$FGS_UTILS__NavigateToState__GoImplCopyWith<$Res> {
+  __$$FGS_UTILS__NavigateToState__GoImplCopyWithImpl(
+      _$FGS_UTILS__NavigateToState__GoImpl _value,
+      $Res Function(_$FGS_UTILS__NavigateToState__GoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -138,7 +138,7 @@ class __$$FGS_UTILS__NavigateToState__GoCopyWithImpl<$Res>
     Object? pathParams = freezed,
     Object? queryParams = freezed,
   }) {
-    return _then(_$FGS_UTILS__NavigateToState__Go(
+    return _then(_$FGS_UTILS__NavigateToState__GoImpl(
       uuid: null == uuid
           ? _value.uuid
           : uuid // ignore: cast_nullable_to_non_nullable
@@ -165,8 +165,9 @@ class __$$FGS_UTILS__NavigateToState__GoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FGS_UTILS__NavigateToState__Go extends FGS_UTILS__NavigateToState__Go {
-  const _$FGS_UTILS__NavigateToState__Go(
+class _$FGS_UTILS__NavigateToState__GoImpl
+    extends FGS_UTILS__NavigateToState__Go {
+  const _$FGS_UTILS__NavigateToState__GoImpl(
       {required this.uuid,
       required this.routeName,
       required this.push,
@@ -208,10 +209,10 @@ class _$FGS_UTILS__NavigateToState__Go extends FGS_UTILS__NavigateToState__Go {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FGS_UTILS__NavigateToState__Go &&
+            other is _$FGS_UTILS__NavigateToState__GoImpl &&
             (identical(other.uuid, uuid) || other.uuid == uuid) &&
             (identical(other.routeName, routeName) ||
                 other.routeName == routeName) &&
@@ -234,9 +235,10 @@ class _$FGS_UTILS__NavigateToState__Go extends FGS_UTILS__NavigateToState__Go {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FGS_UTILS__NavigateToState__GoCopyWith<_$FGS_UTILS__NavigateToState__Go>
-      get copyWith => __$$FGS_UTILS__NavigateToState__GoCopyWithImpl<
-          _$FGS_UTILS__NavigateToState__Go>(this, _$identity);
+  _$$FGS_UTILS__NavigateToState__GoImplCopyWith<
+          _$FGS_UTILS__NavigateToState__GoImpl>
+      get copyWith => __$$FGS_UTILS__NavigateToState__GoImplCopyWithImpl<
+          _$FGS_UTILS__NavigateToState__GoImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -315,7 +317,7 @@ abstract class FGS_UTILS__NavigateToState__Go
           required final bool push,
           final Map<String, String>? pathParams,
           final Map<String, String>? queryParams}) =
-      _$FGS_UTILS__NavigateToState__Go;
+      _$FGS_UTILS__NavigateToState__GoImpl;
   const FGS_UTILS__NavigateToState__Go._() : super._();
 
   @override
@@ -326,30 +328,31 @@ abstract class FGS_UTILS__NavigateToState__Go
   Map<String, String>? get queryParams;
   @override
   @JsonKey(ignore: true)
-  _$$FGS_UTILS__NavigateToState__GoCopyWith<_$FGS_UTILS__NavigateToState__Go>
+  _$$FGS_UTILS__NavigateToState__GoImplCopyWith<
+          _$FGS_UTILS__NavigateToState__GoImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FGS_UTILS__NavigateToState__PopCopyWith<$Res>
+abstract class _$$FGS_UTILS__NavigateToState__PopImplCopyWith<$Res>
     implements $FGS_UTILS__NavigateToStateCopyWith<$Res> {
-  factory _$$FGS_UTILS__NavigateToState__PopCopyWith(
-          _$FGS_UTILS__NavigateToState__Pop value,
-          $Res Function(_$FGS_UTILS__NavigateToState__Pop) then) =
-      __$$FGS_UTILS__NavigateToState__PopCopyWithImpl<$Res>;
+  factory _$$FGS_UTILS__NavigateToState__PopImplCopyWith(
+          _$FGS_UTILS__NavigateToState__PopImpl value,
+          $Res Function(_$FGS_UTILS__NavigateToState__PopImpl) then) =
+      __$$FGS_UTILS__NavigateToState__PopImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String uuid});
 }
 
 /// @nodoc
-class __$$FGS_UTILS__NavigateToState__PopCopyWithImpl<$Res>
+class __$$FGS_UTILS__NavigateToState__PopImplCopyWithImpl<$Res>
     extends _$FGS_UTILS__NavigateToStateCopyWithImpl<$Res,
-        _$FGS_UTILS__NavigateToState__Pop>
-    implements _$$FGS_UTILS__NavigateToState__PopCopyWith<$Res> {
-  __$$FGS_UTILS__NavigateToState__PopCopyWithImpl(
-      _$FGS_UTILS__NavigateToState__Pop _value,
-      $Res Function(_$FGS_UTILS__NavigateToState__Pop) _then)
+        _$FGS_UTILS__NavigateToState__PopImpl>
+    implements _$$FGS_UTILS__NavigateToState__PopImplCopyWith<$Res> {
+  __$$FGS_UTILS__NavigateToState__PopImplCopyWithImpl(
+      _$FGS_UTILS__NavigateToState__PopImpl _value,
+      $Res Function(_$FGS_UTILS__NavigateToState__PopImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -357,7 +360,7 @@ class __$$FGS_UTILS__NavigateToState__PopCopyWithImpl<$Res>
   $Res call({
     Object? uuid = null,
   }) {
-    return _then(_$FGS_UTILS__NavigateToState__Pop(
+    return _then(_$FGS_UTILS__NavigateToState__PopImpl(
       uuid: null == uuid
           ? _value.uuid
           : uuid // ignore: cast_nullable_to_non_nullable
@@ -368,9 +371,9 @@ class __$$FGS_UTILS__NavigateToState__PopCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FGS_UTILS__NavigateToState__Pop
+class _$FGS_UTILS__NavigateToState__PopImpl
     extends FGS_UTILS__NavigateToState__Pop {
-  const _$FGS_UTILS__NavigateToState__Pop({required this.uuid}) : super._();
+  const _$FGS_UTILS__NavigateToState__PopImpl({required this.uuid}) : super._();
 
   @override
   final String uuid;
@@ -381,10 +384,10 @@ class _$FGS_UTILS__NavigateToState__Pop
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FGS_UTILS__NavigateToState__Pop &&
+            other is _$FGS_UTILS__NavigateToState__PopImpl &&
             (identical(other.uuid, uuid) || other.uuid == uuid));
   }
 
@@ -394,9 +397,10 @@ class _$FGS_UTILS__NavigateToState__Pop
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FGS_UTILS__NavigateToState__PopCopyWith<_$FGS_UTILS__NavigateToState__Pop>
-      get copyWith => __$$FGS_UTILS__NavigateToState__PopCopyWithImpl<
-          _$FGS_UTILS__NavigateToState__Pop>(this, _$identity);
+  _$$FGS_UTILS__NavigateToState__PopImplCopyWith<
+          _$FGS_UTILS__NavigateToState__PopImpl>
+      get copyWith => __$$FGS_UTILS__NavigateToState__PopImplCopyWithImpl<
+          _$FGS_UTILS__NavigateToState__PopImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -470,13 +474,14 @@ class _$FGS_UTILS__NavigateToState__Pop
 abstract class FGS_UTILS__NavigateToState__Pop
     extends FGS_UTILS__NavigateToState {
   const factory FGS_UTILS__NavigateToState__Pop({required final String uuid}) =
-      _$FGS_UTILS__NavigateToState__Pop;
+      _$FGS_UTILS__NavigateToState__PopImpl;
   const FGS_UTILS__NavigateToState__Pop._() : super._();
 
   @override
   String get uuid;
   @override
   @JsonKey(ignore: true)
-  _$$FGS_UTILS__NavigateToState__PopCopyWith<_$FGS_UTILS__NavigateToState__Pop>
+  _$$FGS_UTILS__NavigateToState__PopImplCopyWith<
+          _$FGS_UTILS__NavigateToState__PopImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

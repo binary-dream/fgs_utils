@@ -4,8 +4,10 @@ analyze:
 build-flutter-docs:
 	fvm dart doc;
 
+build-runner:
+	fvm flutter pub run build_runner build --delete-conflicting-outputs;
+
 build-runner-watch:
-	@echo "Executing build runner watch";
 	fvm flutter pub run build_runner watch --delete-conflicting-outputs;
 
 start-docusaurus:

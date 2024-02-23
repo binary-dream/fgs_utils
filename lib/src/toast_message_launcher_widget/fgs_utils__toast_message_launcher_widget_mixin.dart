@@ -42,6 +42,11 @@ mixin FGS_UTILS__ToastMessageLauncherWidgetMixin
                     .localizedMessage!
                     .translate(context),
                 ),
+                backgroundColor: state.getToastMessageState()!
+                  .maybeMap(
+                    error: (error) => const Color(0xFFE57373),
+                    orElse: () => null,
+                  ),
               ),
             );
         } else if(state.getToastMessageState()!.message != null) {
@@ -54,6 +59,11 @@ mixin FGS_UTILS__ToastMessageLauncherWidgetMixin
                 content: Text(
                   state.getToastMessageState()!.message!,
                 ),
+                backgroundColor: state.getToastMessageState()!
+                  .maybeMap(
+                    error: (error) => const Color(0xFFE57373),
+                    orElse: () => null,
+                  ),
               ),
             );
         }

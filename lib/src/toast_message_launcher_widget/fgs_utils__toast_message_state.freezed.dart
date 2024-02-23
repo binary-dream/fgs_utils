@@ -12,7 +12,7 @@ part of 'fgs_utils__toast_message_state.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$FGS_UTILS__ToastMessageState {
@@ -27,6 +27,11 @@ mixin _$FGS_UTILS__ToastMessageState {
             FGS_UTILS__TranslateableMessageState? localizedMessage,
             String? message)
         main,
+    required TResult Function(
+            String uuid,
+            FGS_UTILS__TranslateableMessageState? localizedMessage,
+            String? message)
+        error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +41,11 @@ mixin _$FGS_UTILS__ToastMessageState {
             FGS_UTILS__TranslateableMessageState? localizedMessage,
             String? message)?
         main,
+    TResult? Function(
+            String uuid,
+            FGS_UTILS__TranslateableMessageState? localizedMessage,
+            String? message)?
+        error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -45,22 +55,30 @@ mixin _$FGS_UTILS__ToastMessageState {
             FGS_UTILS__TranslateableMessageState? localizedMessage,
             String? message)?
         main,
+    TResult Function(
+            String uuid,
+            FGS_UTILS__TranslateableMessageState? localizedMessage,
+            String? message)?
+        error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(FGS_UTILS__ToastMessageState__Main value) main,
+    required TResult Function(FGS_UTILS__ToastMessageState__Error value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(FGS_UTILS__ToastMessageState__Main value)? main,
+    TResult? Function(FGS_UTILS__ToastMessageState__Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FGS_UTILS__ToastMessageState__Main value)? main,
+    TResult Function(FGS_UTILS__ToastMessageState__Error value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -120,12 +138,12 @@ class _$FGS_UTILS__ToastMessageStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$FGS_UTILS__ToastMessageState__MainCopyWith<$Res>
+abstract class _$$FGS_UTILS__ToastMessageState__MainImplCopyWith<$Res>
     implements $FGS_UTILS__ToastMessageStateCopyWith<$Res> {
-  factory _$$FGS_UTILS__ToastMessageState__MainCopyWith(
-          _$FGS_UTILS__ToastMessageState__Main value,
-          $Res Function(_$FGS_UTILS__ToastMessageState__Main) then) =
-      __$$FGS_UTILS__ToastMessageState__MainCopyWithImpl<$Res>;
+  factory _$$FGS_UTILS__ToastMessageState__MainImplCopyWith(
+          _$FGS_UTILS__ToastMessageState__MainImpl value,
+          $Res Function(_$FGS_UTILS__ToastMessageState__MainImpl) then) =
+      __$$FGS_UTILS__ToastMessageState__MainImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -135,13 +153,13 @@ abstract class _$$FGS_UTILS__ToastMessageState__MainCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$FGS_UTILS__ToastMessageState__MainCopyWithImpl<$Res>
+class __$$FGS_UTILS__ToastMessageState__MainImplCopyWithImpl<$Res>
     extends _$FGS_UTILS__ToastMessageStateCopyWithImpl<$Res,
-        _$FGS_UTILS__ToastMessageState__Main>
-    implements _$$FGS_UTILS__ToastMessageState__MainCopyWith<$Res> {
-  __$$FGS_UTILS__ToastMessageState__MainCopyWithImpl(
-      _$FGS_UTILS__ToastMessageState__Main _value,
-      $Res Function(_$FGS_UTILS__ToastMessageState__Main) _then)
+        _$FGS_UTILS__ToastMessageState__MainImpl>
+    implements _$$FGS_UTILS__ToastMessageState__MainImplCopyWith<$Res> {
+  __$$FGS_UTILS__ToastMessageState__MainImplCopyWithImpl(
+      _$FGS_UTILS__ToastMessageState__MainImpl _value,
+      $Res Function(_$FGS_UTILS__ToastMessageState__MainImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -151,7 +169,7 @@ class __$$FGS_UTILS__ToastMessageState__MainCopyWithImpl<$Res>
     Object? localizedMessage = freezed,
     Object? message = freezed,
   }) {
-    return _then(_$FGS_UTILS__ToastMessageState__Main(
+    return _then(_$FGS_UTILS__ToastMessageState__MainImpl(
       uuid: null == uuid
           ? _value.uuid
           : uuid // ignore: cast_nullable_to_non_nullable
@@ -170,9 +188,9 @@ class __$$FGS_UTILS__ToastMessageState__MainCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FGS_UTILS__ToastMessageState__Main
+class _$FGS_UTILS__ToastMessageState__MainImpl
     extends FGS_UTILS__ToastMessageState__Main {
-  const _$FGS_UTILS__ToastMessageState__Main(
+  const _$FGS_UTILS__ToastMessageState__MainImpl(
       {required this.uuid, this.localizedMessage, this.message})
       : super._();
 
@@ -189,10 +207,10 @@ class _$FGS_UTILS__ToastMessageState__Main
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FGS_UTILS__ToastMessageState__Main &&
+            other is _$FGS_UTILS__ToastMessageState__MainImpl &&
             (identical(other.uuid, uuid) || other.uuid == uuid) &&
             (identical(other.localizedMessage, localizedMessage) ||
                 other.localizedMessage == localizedMessage) &&
@@ -205,10 +223,10 @@ class _$FGS_UTILS__ToastMessageState__Main
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FGS_UTILS__ToastMessageState__MainCopyWith<
-          _$FGS_UTILS__ToastMessageState__Main>
-      get copyWith => __$$FGS_UTILS__ToastMessageState__MainCopyWithImpl<
-          _$FGS_UTILS__ToastMessageState__Main>(this, _$identity);
+  _$$FGS_UTILS__ToastMessageState__MainImplCopyWith<
+          _$FGS_UTILS__ToastMessageState__MainImpl>
+      get copyWith => __$$FGS_UTILS__ToastMessageState__MainImplCopyWithImpl<
+          _$FGS_UTILS__ToastMessageState__MainImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -218,6 +236,11 @@ class _$FGS_UTILS__ToastMessageState__Main
             FGS_UTILS__TranslateableMessageState? localizedMessage,
             String? message)
         main,
+    required TResult Function(
+            String uuid,
+            FGS_UTILS__TranslateableMessageState? localizedMessage,
+            String? message)
+        error,
   }) {
     return main(uuid, localizedMessage, message);
   }
@@ -230,6 +253,11 @@ class _$FGS_UTILS__ToastMessageState__Main
             FGS_UTILS__TranslateableMessageState? localizedMessage,
             String? message)?
         main,
+    TResult? Function(
+            String uuid,
+            FGS_UTILS__TranslateableMessageState? localizedMessage,
+            String? message)?
+        error,
   }) {
     return main?.call(uuid, localizedMessage, message);
   }
@@ -242,6 +270,11 @@ class _$FGS_UTILS__ToastMessageState__Main
             FGS_UTILS__TranslateableMessageState? localizedMessage,
             String? message)?
         main,
+    TResult Function(
+            String uuid,
+            FGS_UTILS__TranslateableMessageState? localizedMessage,
+            String? message)?
+        error,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -254,6 +287,7 @@ class _$FGS_UTILS__ToastMessageState__Main
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(FGS_UTILS__ToastMessageState__Main value) main,
+    required TResult Function(FGS_UTILS__ToastMessageState__Error value) error,
   }) {
     return main(this);
   }
@@ -262,6 +296,7 @@ class _$FGS_UTILS__ToastMessageState__Main
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(FGS_UTILS__ToastMessageState__Main value)? main,
+    TResult? Function(FGS_UTILS__ToastMessageState__Error value)? error,
   }) {
     return main?.call(this);
   }
@@ -270,6 +305,7 @@ class _$FGS_UTILS__ToastMessageState__Main
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(FGS_UTILS__ToastMessageState__Main value)? main,
+    TResult Function(FGS_UTILS__ToastMessageState__Error value)? error,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -284,7 +320,7 @@ abstract class FGS_UTILS__ToastMessageState__Main
   const factory FGS_UTILS__ToastMessageState__Main(
       {required final String uuid,
       final FGS_UTILS__TranslateableMessageState? localizedMessage,
-      final String? message}) = _$FGS_UTILS__ToastMessageState__Main;
+      final String? message}) = _$FGS_UTILS__ToastMessageState__MainImpl;
   const FGS_UTILS__ToastMessageState__Main._() : super._();
 
   @override
@@ -295,7 +331,206 @@ abstract class FGS_UTILS__ToastMessageState__Main
   String? get message;
   @override
   @JsonKey(ignore: true)
-  _$$FGS_UTILS__ToastMessageState__MainCopyWith<
-          _$FGS_UTILS__ToastMessageState__Main>
+  _$$FGS_UTILS__ToastMessageState__MainImplCopyWith<
+          _$FGS_UTILS__ToastMessageState__MainImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FGS_UTILS__ToastMessageState__ErrorImplCopyWith<$Res>
+    implements $FGS_UTILS__ToastMessageStateCopyWith<$Res> {
+  factory _$$FGS_UTILS__ToastMessageState__ErrorImplCopyWith(
+          _$FGS_UTILS__ToastMessageState__ErrorImpl value,
+          $Res Function(_$FGS_UTILS__ToastMessageState__ErrorImpl) then) =
+      __$$FGS_UTILS__ToastMessageState__ErrorImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String uuid,
+      FGS_UTILS__TranslateableMessageState? localizedMessage,
+      String? message});
+}
+
+/// @nodoc
+class __$$FGS_UTILS__ToastMessageState__ErrorImplCopyWithImpl<$Res>
+    extends _$FGS_UTILS__ToastMessageStateCopyWithImpl<$Res,
+        _$FGS_UTILS__ToastMessageState__ErrorImpl>
+    implements _$$FGS_UTILS__ToastMessageState__ErrorImplCopyWith<$Res> {
+  __$$FGS_UTILS__ToastMessageState__ErrorImplCopyWithImpl(
+      _$FGS_UTILS__ToastMessageState__ErrorImpl _value,
+      $Res Function(_$FGS_UTILS__ToastMessageState__ErrorImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? uuid = null,
+    Object? localizedMessage = freezed,
+    Object? message = freezed,
+  }) {
+    return _then(_$FGS_UTILS__ToastMessageState__ErrorImpl(
+      uuid: null == uuid
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
+              as String,
+      localizedMessage: freezed == localizedMessage
+          ? _value.localizedMessage
+          : localizedMessage // ignore: cast_nullable_to_non_nullable
+              as FGS_UTILS__TranslateableMessageState?,
+      message: freezed == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FGS_UTILS__ToastMessageState__ErrorImpl
+    extends FGS_UTILS__ToastMessageState__Error {
+  const _$FGS_UTILS__ToastMessageState__ErrorImpl(
+      {required this.uuid, this.localizedMessage, this.message})
+      : super._();
+
+  @override
+  final String uuid;
+  @override
+  final FGS_UTILS__TranslateableMessageState? localizedMessage;
+  @override
+  final String? message;
+
+  @override
+  String toString() {
+    return 'FGS_UTILS__ToastMessageState.error(uuid: $uuid, localizedMessage: $localizedMessage, message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FGS_UTILS__ToastMessageState__ErrorImpl &&
+            (identical(other.uuid, uuid) || other.uuid == uuid) &&
+            (identical(other.localizedMessage, localizedMessage) ||
+                other.localizedMessage == localizedMessage) &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, uuid, localizedMessage, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FGS_UTILS__ToastMessageState__ErrorImplCopyWith<
+          _$FGS_UTILS__ToastMessageState__ErrorImpl>
+      get copyWith => __$$FGS_UTILS__ToastMessageState__ErrorImplCopyWithImpl<
+          _$FGS_UTILS__ToastMessageState__ErrorImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            String uuid,
+            FGS_UTILS__TranslateableMessageState? localizedMessage,
+            String? message)
+        main,
+    required TResult Function(
+            String uuid,
+            FGS_UTILS__TranslateableMessageState? localizedMessage,
+            String? message)
+        error,
+  }) {
+    return error(uuid, localizedMessage, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            String uuid,
+            FGS_UTILS__TranslateableMessageState? localizedMessage,
+            String? message)?
+        main,
+    TResult? Function(
+            String uuid,
+            FGS_UTILS__TranslateableMessageState? localizedMessage,
+            String? message)?
+        error,
+  }) {
+    return error?.call(uuid, localizedMessage, message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            String uuid,
+            FGS_UTILS__TranslateableMessageState? localizedMessage,
+            String? message)?
+        main,
+    TResult Function(
+            String uuid,
+            FGS_UTILS__TranslateableMessageState? localizedMessage,
+            String? message)?
+        error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(uuid, localizedMessage, message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FGS_UTILS__ToastMessageState__Main value) main,
+    required TResult Function(FGS_UTILS__ToastMessageState__Error value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(FGS_UTILS__ToastMessageState__Main value)? main,
+    TResult? Function(FGS_UTILS__ToastMessageState__Error value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FGS_UTILS__ToastMessageState__Main value)? main,
+    TResult Function(FGS_UTILS__ToastMessageState__Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FGS_UTILS__ToastMessageState__Error
+    extends FGS_UTILS__ToastMessageState {
+  const factory FGS_UTILS__ToastMessageState__Error(
+      {required final String uuid,
+      final FGS_UTILS__TranslateableMessageState? localizedMessage,
+      final String? message}) = _$FGS_UTILS__ToastMessageState__ErrorImpl;
+  const FGS_UTILS__ToastMessageState__Error._() : super._();
+
+  @override
+  String get uuid;
+  @override
+  FGS_UTILS__TranslateableMessageState? get localizedMessage;
+  @override
+  String? get message;
+  @override
+  @JsonKey(ignore: true)
+  _$$FGS_UTILS__ToastMessageState__ErrorImplCopyWith<
+          _$FGS_UTILS__ToastMessageState__ErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
