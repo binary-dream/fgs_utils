@@ -1,5 +1,5 @@
-/// Log non fatal error service case.
-abstract class FGS_UTIL__LogNonFatalErrorServiceCase {
+/// Log non fatal error provider case.
+abstract class FGS_UTIL__LogNonFatalErrorProviderCase {
   /// Log non fatal error.
   Future<void> logNonFatalError({
     dynamic exception,
