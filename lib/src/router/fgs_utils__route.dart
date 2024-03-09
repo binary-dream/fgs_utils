@@ -1,4 +1,7 @@
 
+import 'dart:async';
+
+import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 /// Route.
@@ -9,6 +12,7 @@ class FGS_UTILS__Route {
     required this.name,
     required this.builder,
     this.routes = const [],
+    this.redirect,
   });
 
   /// Path.
@@ -19,6 +23,8 @@ class FGS_UTILS__Route {
   final GoRouterWidgetBuilder builder;
   /// Routes.
   final List<FGS_UTILS__Route> routes;
+  /// Redirect.
+  final FutureOr<String?> Function(BuildContext, GoRouterState)? redirect;
 
   /// To GoRoute.
   GoRoute toGoRoute() {
@@ -26,6 +32,7 @@ class FGS_UTILS__Route {
       path: path,
       name: name,
       builder: builder,
+      redirect: redirect,
       routes: routes.map((route) => route.toGoRoute()).toList(),
     );
   }
